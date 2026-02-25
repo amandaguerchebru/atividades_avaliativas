@@ -12,5 +12,26 @@
 
     <button onclick="converterFahrenheitParaCelsius()">
         Fahrenheit para Celsius</button>
+        <div id="resultado"></div>
+
+    <script>
+        // Celsius para Fahrenheit
+        function converterCelsiusParaFahrenheit(){
+            let celsius = parseFloat(prompt("Digite a temperatura em Celsius: "));
+            let fahrenheit = (celsius * 9 / 5) + 32;
+            document.getElementById("resultado").innerHTML = `
+            ${celsius} Celsius equivalem a ${fahrenheit.toFixed(2)} Fahrenheit 
+            `;
+        }
+
+        // Fahrenheit para Celsius
+        function converterFahrenheitParaCelsius(){
+            let fahrenheit = parseFloat(prompt("Digite a temperatura em Fahrenheit: "));
+            let celsius = (fahrenheit - 32) * 5 / 9;
+            document.getElementById("resultado").innerHTML = `
+            ${fahrenheit} Fahrenheit equivalem a ${celsius.toFixed(2)} Celsius
+            `;
+        }
+    </script>
 </body>
 </html>
